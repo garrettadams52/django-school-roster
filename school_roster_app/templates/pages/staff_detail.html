@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Staff Details Page</title>
+    </head>
+    <body>
+        <h2>Staff Details Page</h2>
+        <ul>
+            <li><a href={% url 'list_staff' %}>All Staff</a></li>
+            <li><a href={% url 'list_students' %}>All Student</a></li>
+        </ul>
+        <ul>
+            <li>{{staff_mem.name}} {{staff_mem.age}} {{staff_mem.password}} {{staff_mem.role}} {{staff_mem.employee_id}}</li>
+        </ul>
+
+
+    </body>
+</html>
