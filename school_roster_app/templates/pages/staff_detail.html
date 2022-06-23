@@ -1,11 +1,15 @@
 {%extends 'pages/layout.html'%}
 
 <body>
-    {%block header%}<h2>Staff Details Page</h2>{%endblock%}
+    {%block header%}<h2>Staff Details Page</h2>{%include 'pages/homebutton.html'%}{%endblock%}
     {%block content%}
-    {%include 'pages/homebutton.html'%}
+   
     <ul>
-        <li>{{staff_mem.name}} {{staff_mem.age}} {{staff_mem.password}} {{staff_mem.role}} {{staff_mem.employee_id}}</li>
+        <li>Name: {{staff_mem.name}}</li>
+        <li>Age: {{staff_mem.age}}</li>
+        <li>Password: {{staff_mem.password}}</li>
+        <li>Role: {{staff_mem.role}}</li>
+        <li>Employee Id: {{staff_mem.employee_id}}</li>
     </ul>
     {%endblock%}
 

@@ -1,13 +1,13 @@
 {%extends 'pages/layout.html'%}
 
 <body>
-    {%block header%}<h2>Staff Directory</h2>{%endblock%}
+    {%block header%}<h2>Staff Directory</h2>{%include 'pages/homebutton.html'%}{%endblock%}
     {%block content%}
-    {%include 'pages/homebutton.html'%}
-    <ul>
+   
+    <ol>
         {%for i in school_staff%}
         <li><a href={% url 'staff_detail' i.employee_id %}>{{i.name}}</a></li>
         {%endfor%}  
-    </ul>
+    </ol>
     {%endblock%}
 </body>
