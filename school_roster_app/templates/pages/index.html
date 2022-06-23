@@ -1,13 +1,15 @@
-<!-- school_roster_app/templates/pages/index.html -->
-<html>
-    <head>
-        <title>School Page</title>
-    </head>
-    <body>
-        <h2>{{school_name}} Directory</h2>
-        <ul>
-            <li><a href={% url 'list_staff' %}>All Staff</a></li>
-            <li><a href={% url 'list_students' %}>All Student</a></li>
-        </ul>
-    </body>
-</html>
+{%extends 'pages/layout.html'%}
+    
+
+<body>
+    {%block header%}
+    <h2>{{school_name}} Directory</h2>
+    {%endblock%}
+    {%block content%}
+
+    <div><a href={% url 'list_staff' %}>All Staff</a></div>
+    <div><a href={% url 'list_students' %}>All Student</a></div>
+    {%endblock%}
+   
+</body>
+

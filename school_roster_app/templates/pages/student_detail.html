@@ -1,17 +1,13 @@
-<html>
-    <head>
-        <title>Student Details Page</title>
-    </head>
-    <body>
-        <h2>Student Details Page</h2>
-        <ul>
-            <li><a href={% url 'list_staff' %}>All Staff</a></li>
-            <li><a href={% url 'list_students' %}>All Student</a></li>
-        </ul>
-        <ul>
-            <li>{{student.name}} {{student.age}} {{student.password}} {{student.role}} {{student.school_id}}</li>
-            
-        </ul>
+{%extends 'pages/layout.html'%}
 
-    </body>
-</html>
+<body>
+    {%block header%}<h2>Student Details Page</h2>{%endblock%}
+    {%block content%}
+    {%include 'pages/homebutton.html'%}
+    <ul>
+        <li>{{student.name}} {{student.age}} {{student.password}} {{student.role}} {{student.school_id}}</li>
+        
+    </ul>
+    {%endblock%}
+
+</body>
